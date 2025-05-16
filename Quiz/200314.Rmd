@@ -1,3 +1,10 @@
+---
+title: "Quiz 2"
+output:
+  pdf_document: default
+---
+
+```{r, echo=TRUE}
 ###############
 #loading libraries
 ###############
@@ -17,7 +24,7 @@ library(ggplot2)
 #Read data
 ###########
 
-quiz2 <- read_csv("Desktop/MTH443/Quiz/Quiz 2/quiz2.csv")
+quiz2 <- read_csv("~/Desktop/MTH443/Quiz/Quiz 2/quiz2.csv")
 
 yesHDS <- na.omit(subset(quiz2, HDS == 1))
 noHDS <- na.omit(subset(quiz2, HDS == 0))
@@ -83,4 +90,4 @@ evaluate_quiz2_model <- function(train_data, test_data) {
 
 results <- evaluate_quiz2_model(train, test)
 print(results)
-
+```
